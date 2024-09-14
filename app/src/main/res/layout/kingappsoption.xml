@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ar_mall_surat_2"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/parentAds"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:padding="13dp"
+                android:src="@drawable/mz_icon_back"
+                app:tint="@color/textPrimary" />
+
+            <TextView
+                style="@style/TextViewToolbar"
+                android:layout_marginEnd="50dp"
+                android:layout_toEndOf="@+id/img_back"
+                android:text="Call History" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/ll_call_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:clipToPadding="true"
+                    app:cardBackgroundColor="@color/backgroundCard"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_call"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icnCall"
+                            android:layout_width="200px"
+                            android:layout_height="200px"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/mz_callicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtheadCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="Call History"
+                            android:textColor="@color/theme_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toRightOf="@+id/icnCall"
+                            app:layout_constraintRight_toLeftOf="@+id/c_next"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_callh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:text="Get call details of any number"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/icnCall"
+                            app:layout_constraintRight_toLeftOf="@+id/c_next"
+                            app:layout_constraintTop_toBottomOf="@+id/txtheadCall" />
+
+                        <ImageView
+                            android:id="@+id/c_next"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:src="@drawable/mz_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:clipToPadding="true"
+                    app:cardBackgroundColor="@color/backgroundCard"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_whatsapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icnwhatsapp"
+                            android:layout_width="200px"
+                            android:layout_height="200px"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/mz_waicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtheadwhatsapp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="Whatsapp History"
+                            android:textColor="@color/theme_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toRightOf="@+id/icnwhatsapp"
+                            app:layout_constraintRight_toLeftOf="@+id/w_next"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_whatsapph"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:text="Get All Whatsapp chat History"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/icnwhatsapp"
+                            app:layout_constraintRight_toLeftOf="@+id/w_next"
+                            app:layout_constraintTop_toBottomOf="@+id/txtheadwhatsapp" />
+
+                        <ImageView
+                            android:id="@+id/w_next"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:src="@drawable/mz_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:clipToPadding="true"
+                    app:cardBackgroundColor="@color/backgroundCard"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icnsms"
+                            android:layout_width="200px"
+                            android:layout_height="200px"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/mz_smsicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtheadsms"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="SMS History"
+                            android:textColor="@color/theme_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toRightOf="@+id/icnsms"
+                            app:layout_constraintRight_toLeftOf="@+id/s_next"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_smsh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:text="Get SMS details of any number"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/icnsms"
+                            app:layout_constraintRight_toLeftOf="@+id/s_next"
+                            app:layout_constraintTop_toBottomOf="@+id/txtheadsms" />
+
+                        <ImageView
+                            android:id="@+id/s_next"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:src="@drawable/mz_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_12sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:clipToPadding="true"
+                    app:cardBackgroundColor="@color/backgroundCard"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ll_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/icnall"
+                            android:layout_width="200px"
+                            android:layout_height="200px"
+                            android:padding="@dimen/_10sdp"
+                            android:src="@drawable/mz_allicon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtheadall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="All History"
+                            android:textColor="@color/theme_blue"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toRightOf="@+id/icnall"
+                            app:layout_constraintRight_toLeftOf="@+id/a_next"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_allh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:lines="2"
+                            android:text="Get All Call, Whatsapp, SMS details"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toRightOf="@+id/icnall"
+                            app:layout_constraintRight_toLeftOf="@+id/a_next"
+                            app:layout_constraintTop_toBottomOf="@+id/txtheadall" />
+
+                        <ImageView
+                            android:id="@+id/a_next"
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:src="@drawable/mz_arrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/parentAds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center">
+
+        <FrameLayout
+            android:id="@+id/native_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Call History</string>
+    <string name="text_pay_using">Pay Using</string>
+    <string name="text_payment_cancel">Cancel</string>
+    <string name="google_pay">Google Pay</string>
+</resources>

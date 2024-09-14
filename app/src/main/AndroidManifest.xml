@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sndev.kingapps.getcallhistory.closedtestingapps">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsInit.kingappsMethod"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CallHistory"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsPayer.kingappsGpay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsPdf"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsOption"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsMail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsNumber"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsHome.kingappsHome"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsSplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsPayer.kingappsPhone"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsPrivacy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sndev.kingapps.getcallhistory.closedtestingapps.kingappsActivity.kingappsThanks"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.sndev.kingapps.getcallhistory.closedtestingapps.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+    </application>
+</manifest>
